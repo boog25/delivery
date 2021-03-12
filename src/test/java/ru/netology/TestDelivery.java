@@ -27,7 +27,7 @@ String getDate(int shift) {
     String meetingDate = getDate(4);
     @Test
     void shouldNewDelivery() {
-        //Configuration.headless=true;
+        Configuration.headless=true;
         open("http://localhost:9999/");
         $("[placeholder='Город']").setValue("Уфа").click();
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
